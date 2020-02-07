@@ -1,0 +1,44 @@
+<html>
+  <body>
+
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="buttton.css">
+
+    
+<h2>Colored Table Header</h2>
+
+<% if(user_array.length>0) { %>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Gender</th>
+    <th>File </th>
+    <th>Actions</th>
+ </tr>
+
+    <% for(var i=0;i<user_array.length;i++){ %>
+     <tr>
+        <td><%= i+1 %></td>
+        <td><%= user_array[i].u_name %></td> 
+         <td><%= user_array[i].user_city %></td>
+        <td><%= user_array[i].user_country %></td>
+        <td><%= user_array[i].gender %></td>
+        <td><img style="width:100px;" src='upload/<%= user_array[i].img_file %>'></td> 
+        <td>
+                <button class="button" onclick="window.location.href='/edit/<%= user_array[i]._id %>';">Edit</button>
+                <button class="button button2" onclick="window.location.href='/delete/<%= user_array[i]._id %>';">Delete</button>
+                <button class="button button3" onclick="window.location.href='/show/<%= user_array[i]._id %>';">Show</button>
+        </td>
+  </tr>
+  <% } %>
+  
+</table>
+<% } else { %>
+    No record Found
+    <% } %>
+
+</body>
+</html>

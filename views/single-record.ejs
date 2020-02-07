@@ -1,0 +1,29 @@
+<table>
+    <tbody>
+        <tr>
+            <td>ID:</td>
+            <td><%= user_array._id %></td>
+        </tr>
+
+        <tr>
+            <td>Name:</td>
+            <td><%= user_array.u_name %></td>
+        </tr>
+
+        <tr>
+            <td>City:</td>
+            <td><%= user_array.user_city %></td>
+        </tr>
+
+        <tr>
+            <td>country:</td>
+            <td><%= user_array.country %></td>
+        </tr>
+
+        <tr>
+        <td>Image:</td>
+        <td><img style="width:100px;" src='/upload/<%= user_array.img_file %>'></td>
+    </tr>
+
+    </tbody>
+</table>

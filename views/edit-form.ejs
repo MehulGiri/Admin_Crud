@@ -1,0 +1,33 @@
+<html>
+    <body>
+        
+        <form method="POST">
+            <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="u_name" value="<%= user_array.u_name %>"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- <td>city:</td> -->
+                        <td><label class="form-group">Country</label><br>
+                            <select id="country" name="user_country">
+                                <option value="India">India</option>
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                        <td>city:</td>
+                        <td><input type="text" name="user_city" value="<%= user_array.user_city %>"></td>
+                    </tr>
+
+                    <tr>
+                        <td><button value="/display-data" onclick="window.location.href='/display-data';">Edit</button></td></td>
+                    </tr>
+            </table>
+        </form>
+    </body>
+</html>
